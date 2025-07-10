@@ -7,6 +7,8 @@ public class PeopleTest {
         People sana = new People(); // 클래스 타입 변수명 = new 클래스이름()
         People momo = new People();
 
+        System.out.println("그냥sana:" + sana);
+
         System.out.println("sana People 객체 정보(속성 기본값 확인) ------");
         System.out.println("name : " + sana.name);          // null(참조형 기본값)
         System.out.println("age : " + sana.age);            // 0
@@ -25,7 +27,7 @@ public class PeopleTest {
         System.out.println("age : " + momo.age);            // 23
         System.out.println("isAdult : " + momo.isAdult);    // true
         System.out.println("gender : " + momo.gender);      // F
-        // System.out.println("weight : " + momo.weight);      // 요류 : People 클래스에 없는 속성
+        // System.out.println("weight : " + momo.weight);      // 요류 : People 클래스에 없는 속성 
 
         // 참고 : 문자열 객체 생성
         String test = new String();

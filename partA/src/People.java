@@ -5,6 +5,8 @@ public class People {
     boolean isAdult;
     char gender;
 
+
+    
 // 프로그램 실행 클래스가 아니므로 main 을 안 만듭니다
 
 }
