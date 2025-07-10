@@ -13,7 +13,7 @@ public class B04OverrideTest {
 
     public static void main(String[] args) {
         Score2 momo = new Score2();
-        
+
         momo.name = "모모";
         momo.kor = 99;
         momo.eng = 89;
@@ -21,7 +21,7 @@ public class B04OverrideTest {
 
         System.out.println("momo 의 정보 : " + momo);
         System.out.println("---- : " + momo.name + "," + momo.kor + "," + momo.eng + "," + momo.math);
-        
+
     }
 
 }
@@ -42,17 +42,17 @@ class Score2 { // Score2 시작
     }
 } // Score2 끝 (Scope - 범위)
 /*
- *      정리 : 
- *      Score2 momo = new Score2();
- *      String sana = "sana"
- *      
- *      // 아래의 2줄은 모두 momo.toString(), sana.toString() 을 실행합니다.
- *      // 기본적으로 '객체참조변수.toString()' 은 참조값을 출력.
- *      // toString() 을 재정의(오버라이드)하면 출력 문자열을 바꿀 수 있어요.
- *      //      🔥 String 클래스는 이미 toSting() 메소드가 재정의 되어서 문자열이 출력됩니다.
- *      //      🔥 개발자가 만든 클래스는 개발자가 재정의 합니다.
- *      System.out.println(momo);
- *      System.out.println(sana);
+ * 정리 :
+ * Score2 momo = new Score2();
+ * String sana = "sana"
+ * 
+ * // 아래의 2줄은 모두 momo.toString(), sana.toString() 을 실행합니다.
+ * // 기본적으로 '객체참조변수.toString()' 은 참조값을 출력.
+ * // toString() 을 재정의(오버라이드)하면 출력 문자열을 바꿀 수 있어요.
+ * // 🔥 String 클래스는 이미 toSting() 메소드가 재정의 되어서 문자열이 출력됩니다.
+ * // 🔥 개발자가 만든 클래스는 개발자가 재정의 합니다.
+ * System.out.println(momo);
+ * System.out.println(sana);
  * 
  * 
  * 
