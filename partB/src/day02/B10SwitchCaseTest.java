@@ -23,8 +23,8 @@ public class B10SwitchCaseTest {
                 case "/":
                     System.out.println("나누기 선택 하셨습니다.");
                     break;
-                case "N":
-                    status = false;
+                case "N", "n":
+                    status = false; // 종료 조건
                     break;
                 default:
                     System.out.println("질못된 선택 입니다. +, -, *, / 값만 사용합니다.");
