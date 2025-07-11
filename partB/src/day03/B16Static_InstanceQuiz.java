@@ -38,7 +38,7 @@ class Counter {
     }
 
     // count 값을 리턴하는 getter 만들기 => 리턴 타입이 int
-    public static int getCount() { // 2) 인자러 선언하는 변수 없음.
+    public static int getCount() { // 2) 인자로 선언하는 변수 없음.
         // System.out.println(num); 오류
         // setNum(33); 오류
         return count;
