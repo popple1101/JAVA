@@ -6,9 +6,9 @@ public class B12ScoreInstanceMethod {
         Score junwoo = new Score();
 
         junwoo.name = "김준우";
-        junwoo.kor = 98;
-        junwoo.eng = -50;
-        junwoo.math = 100;
+        junwoo.kor = 99;
+        junwoo.eng = 123;
+        junwoo.math = 88;
 
         System.out.println(junwoo);
         System.out.println("----객체의 값 유효성 검사하기----");
@@ -20,17 +20,19 @@ public class B12ScoreInstanceMethod {
         System.out.println("---------------------------------");
         System.out.println("점수 수정 중......");
 
-        junwoo.eng = 100;
+        // junwoo.eng = 100;
         if (junwoo.isScoresValid()) {
             // 점수 합계
             System.out.println("총점 : " + junwoo.sum());
-            System.out.println("총점(소수점) : " + junwoo.avg());
+            System.out.println("평균 : " + junwoo.avg());
             System.out.println("학점 : " + junwoo.getGrade());
 
         } else {
             // 이스케이플 문자 \\, \"
             System.out.println("점수값 오류 (\"모든 과목의 점수는 \\0 ~ 100\\ 로 합니다.\")");
         }
+        System.out.println("학점 : " + (junwoo.isScoresValid() ? junwoo.getGrade() : 'E')); // 'E'
+
     }
 }
 
@@ -111,7 +113,7 @@ class Score {
     public String toString() { // overrding (재정의)
         // return name + " : " + kor + ", " + eng + ", " + math;
 
-        return String.format("%s : %d, %d, %d", name, kor, eng, math); // d: Decimal
+        return String.format("%s : %d, %d, %d", name, kor, eng, math); // d: Decimal , s : String
         // "출력 포맷을 데이터형식 기호로 작성", 순서대로 값을 나열
     }
 
