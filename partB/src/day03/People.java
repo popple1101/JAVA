@@ -21,7 +21,7 @@ public class People {
     // setter : 인자 타입 주의
     public void setName(String name) { // name 변수에 원하는 값이 입력
         this.name = name;
-        // this는 객체가 만들어졌을 때 자기 자신을 가리킵니다.
+        // 🔥 this는 객체가 만들어졌을 때 자기 자신을 가리킵니다.
         // this.name 은 객체의 name 필드 = 인자로 전달된 name
 
     }

@@ -12,7 +12,7 @@ package day03;
  * private : 현재 클래스에서 사용 가능함.
  * 
  * 
- * - 공통적으로 protected 는 상속 (이후 진도에서)
+ * - 접근 권한 protected 는 상속 (이후 진도에서)
  */
 public class B14AccessTest {
 
