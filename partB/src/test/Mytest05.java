@@ -34,6 +34,8 @@ public class Mytest05 {
             int range = 52 - i; // 정수형 범위 변수에 52-i(=50,49,48,47,46) 반복한 값을 저장
             int randomIndex = (int) (range * rndNum); // 정수형 무작위인덱스 값에 범위*무작위수 값을 저장
             pickedCard[i] = deck[randomIndex];
+            deck = removeCard(deck, randomIndex);
+
             System.out.println("뽑힌 카드 : " + Arrays.toString(pickedCard));
             System.out.println("남은 카드 수 : " + deck.length);
             System.out.println("남은 카드들 : " + Arrays.toString(deck));
@@ -42,10 +44,10 @@ public class Mytest05 {
 
     }
 
-    public static int[] removeCard(int[] deck, int cardIndex) {
-        int[] newCard = new int[5];
+    public static String[] removeCard(String[] deck, int cardIndex) {
+        String[] newCard = new String[deck.length - 1];
         System.arraycopy(deck, 0, newCard, 0, cardIndex);
-        System.arraycopy(deck, cardIndex + 1, newCard, cardIndex, cardIndex - 1);
+        System.arraycopy(deck, cardIndex + 1, newCard, cardIndex, deck.length - cardIndex - 1);
 
         return newCard;
     }
