@@ -12,9 +12,10 @@ public class B12ScoreInstanceMethod {
 
         System.out.println(junwoo);
         System.out.println("----객체의 값 유효성 검사하기----");
-        System.out.println("name : " + junwoo.isNameValid());
-        System.out.println("kor : " + junwoo.isKorValid());
-        System.out.println("eng : " + junwoo.isEngValid());
+        // 🔥 7월14일 복습 - 메소드의 은닉
+        // System.out.println("name : " + junwoo.isNameValid());
+        // System.out.println("kor : " + junwoo.isKorValid());
+        // System.out.println("eng : " + junwoo.isEngValid());
         System.out.println("math : " + junwoo.isMathValid());
         System.out.println("모든 점수 : " + junwoo.isScoresValid());
         System.out.println("---------------------------------");
@@ -90,22 +91,24 @@ class Score {
         return name.matches("^[가-힣]{2,5}$");
     }
 
-    boolean isScoresValid() {
+    boolean isScoresValid() { // 모든 점수가 유효한지 외부에서 사용하도록 함.
         return isKorValid() && isEngValid() && isMathValid();
     }
 
+    // 🔥 7월14일 복습 - 메소드의 은닉. 메소드를 private 으로 변경함.
+    // ㄴ isScoresValid() 에서만 사용.
     // kor : 0 ~ 100 isKorValid
-    boolean isKorValid() {
+    private boolean isKorValid() {
         return kor >= 0 && kor <= 100;
     }
 
     // eng : 0 ~ 100 isEngValid
-    boolean isEngValid() {
+    private boolean isEngValid() {
         return eng >= 0 && eng <= 100;
     }
 
     // math : 0 ~ 100 isMathValid
-    boolean isMathValid() {
+    private boolean isMathValid() {
         return math >= 0 && math <= 100;
     }
 
