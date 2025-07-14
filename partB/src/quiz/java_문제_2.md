@@ -140,7 +140,7 @@ public class Student {
 ```
 
 ### 10. 다음 코드의 실행 결과를 예측하고, 그 이유를 설명하시오.
--> Instance: 1, Static: 1
+-> Instance: 1, Static: 2
    Instance: 1, Static: 2 
    이유 : instanceCount 변수는 인스턴스 변수이고, staticCount 변수는 static 변수이므로 static 변수는 메모리를 공유하기 때문에 누적이 된다.
 ```java
@@ -159,8 +159,9 @@ public class Counter {
     
     public static void main(String[] args) {
         Counter c1 = new Counter();
+        // c1.printCounts(); // 여기는 staticCount 는 1 입니다.
         Counter c2 = new Counter();
-        c1.printCounts();
+        c1.printCounts(); // staticCount 는 2 입니다. c2 객체만들 때 +1 두번 함.
         c2.printCounts();
     }
 }
