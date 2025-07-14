@@ -13,10 +13,10 @@ public class B12ScoreInstanceMethod {
         System.out.println(junwoo);
         System.out.println("----객체의 값 유효성 검사하기----");
         // 🔥 7월14일 복습 - 메소드의 은닉
-        // System.out.println("name : " + junwoo.isNameValid());
+        System.out.println("name : " + junwoo.isNameValid());
         // System.out.println("kor : " + junwoo.isKorValid());
         // System.out.println("eng : " + junwoo.isEngValid());
-        System.out.println("math : " + junwoo.isMathValid());
+        // System.out.println("math : " + junwoo.isMathValid());
         System.out.println("모든 점수 : " + junwoo.isScoresValid());
         System.out.println("---------------------------------");
         System.out.println("점수 수정 중......");
