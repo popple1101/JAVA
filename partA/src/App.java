@@ -5,7 +5,8 @@ public class App { // 클래스 정의
         System.out.println("Hello, World!");
     }
 }
-/* day01 : 간단한 자바 맛보기
+/*
+ * day01 : 간단한 자바 맛보기
  * 
  * 기본형 데이터
  * 클래스와 객체

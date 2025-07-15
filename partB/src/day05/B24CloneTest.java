@@ -3,13 +3,19 @@ package day05;
 public class B24CloneTest {
     // clone() 은 Object 클래스 최상위 부모로부터 상속
 
-    public static void main(String[] args) throws Exception {
-        Student sana = new Student("최사나", 29);
-        Student sanaClone = sana.clone();
-        System.out.println("sanaClone : " + sanaClone.getName() + "," + sanaClone.getAge());
+    public static void main(String[] args) {
+        try {
+            Student sana = new Student("최사나", 29);
+            Student sanaClone = sana.clone();
+            // checked 예외 : 컴파일러가 메소드의 예외 가능성을 알고 있어요.
+            // -> 예외 처리 필수.
+            System.out.println("sanaClone : " + sanaClone.getName() + "," + sanaClone.getAge());
 
-        System.out.println("sana 주소 : " + sana);
-        System.out.println("sanaClone 주소 : " + sanaClone);
+            System.out.println("sana 주소 : " + sana);
+            System.out.println("sanaClone 주소 : " + sanaClone);
+        } catch (Exception e) {
+            System.out.println("clone 예외 발생!!");
+        }
     }
 }
 
