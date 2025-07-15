@@ -48,7 +48,7 @@ public class Mytest05 {
         String[] newCard = new String[deck.length - 1];
         System.arraycopy(deck, 0, newCard, 0, cardIndex);
         System.arraycopy(deck, cardIndex + 1, newCard, cardIndex, deck.length - cardIndex - 1);
-
+        
         return newCard;
     }
 }
