@@ -10,9 +10,7 @@ public class B24CloneTest {
 
         System.out.println("sana 주소 : " + sana);
         System.out.println("sanaClone 주소 : " + sanaClone);
-
     }
-
 }
 
 class Student implements Cloneable {
