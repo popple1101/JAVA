@@ -1,0 +1,20 @@
+
+* 도형으로 그림 게임 만들기. (예시) - 도형 객체가 필요합니다.
+05 ShapeParent
+* 도형의 종류 :
+ 부모클래스 : 도형의 공통점을 찾아서 Shape 정의
+	- 속성 : posX, posY, width, height, color, id
+	- 기능 : move(int offsetX, int offsetY)               -> setter 역할
+                      resize(int offsetW, int offsetH)  -> setter 역할
+                      color(String color)
+                      calcArea() 넓이 리턴
+                      draw() : 속성값을 출력하기
+                      getter()만 만드세요.
+                      기본 생성자 : 공유 count++ 후에 id 값으로 대입하기 (static을 쓰면 될 듯?)
+                                color 기본값은 "black"
+	           커스텀 생성자 : 기본생성자 초기화와 posX, posY, width, height 받아서 초기화
+
+ 자식 클래스 정의 : 사각형(Rectangle), 삼각형(Triangle), 원(Circle)
+	         - 재정의 메소드
+                       calcArea(), draw()
+                     - 추가 속성이 필요한 자식클래스는?
