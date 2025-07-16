@@ -16,6 +16,16 @@ public class B26ExceptionTest {
             System.out.println("프로그램 종료합니다. 모든 자원을 해제합니다.");
             // XXXX.close()
         }
+
+        // 0으로 나누는 예외 테스트
+        test.divide(23, 0); // java.lang.ArithmeticException: / by zero
+    }
+
+    public void divide(int a, int b) {
+        // if (b == 0) {
+        // new ArithmeticException("0으로 나눌 수 없습니다");
+        // }
+        System.out.println(a / b);
     }
 
     /*

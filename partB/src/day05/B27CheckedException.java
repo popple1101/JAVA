@@ -10,7 +10,8 @@ public class B27CheckedException {
         try {
             s1.setScore(-9);
         } catch (Exception e) {
-
+            System.out.println("예외 발생 : " + e.getMessage() + ", " + e.getClass()); // class
+                                                                                   // java.lang.IllegalArgumentException
         }
     }
 }
@@ -22,13 +23,13 @@ class Score {
         return score;
     }
 
-    // 여기서 직접 try~catch 안하면 사용하는 main 으로 위임
+    // 여기서 직접 try~catch 안하면 사용하는 main 으로 위임(떠넘기기)
     public void setScore(int score) throws IOException {
         if (score >= 0 && score <= 100) {
             this.score = score;
         } else {
-            // 잘못된 값 -> 예외 발생 처리
-            // throw new IllegalArgumentException("score 값 오류!!") // Checked 예외 X
+            // 잘못된 값 -> 개발자가 임의로 예외 발생 처리
+            // throw new IllegalArgumentException("score 값 오류!!"); // Checked 예외 X
             throw new IOException("score 값 오류!!"); // Checked 예외
         }
     }
