@@ -31,7 +31,7 @@ public class C10MemberCompare {
     }
 }
 
-class Member implements Cloneable, Comparable<Member> {
+class Member implements Cloneable, Comparable<Member> { 
     private String name;
     private int age;
 
@@ -51,9 +51,9 @@ class Member implements Cloneable, Comparable<Member> {
     @Override // CompareTo 인터페이스 재정의 - Member 객체의 어떤 속성값 비교할지 것인지 ....
     public int compareTo(Member o) { // this 와 상대 객체 o 를 비교
         // 1) name 속성으로 비교
-        return this.name.compareTo(o.name);
+        // return this.name.compareTo(o.name);
         // 2) age 속성으로 비교
-        // return this.age - o.age;
+        return this.age - o.age;
 
     }
 
