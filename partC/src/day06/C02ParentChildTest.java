@@ -23,12 +23,11 @@ public class C02ParentChildTest {
     }
 }
 
-
-
 class YourChild extends YourParent { // 부모가 물려준 메소드를 재정의하는 자식클래스
 
     // 부모가 정의한 setMessage() 재정의 가능함. -> 기능 수행을 변경.
     // ✅ 주의 : 부모가 public -> 자식도 반드시 public
+    @Override
     public void setMessage(String message) {
         // this.message = message; // ❌ private 접근. 오류
         String imoji = "👩🏻‍🦰"; // vs code 에서 이모지 출력하려면 터미널 명령어 chcp 65001 실행하기
@@ -38,7 +37,8 @@ class YourChild extends YourParent { // 부모가 물려준 메소드를 재정�
 
     @Override
     public void setName(String name) {
-        this.name = "👨🏻‍🦲" + name;
+        this.name = "👨🏻‍🦲" + name; // 정확히 super.name = "👨🏻‍🦲" + name;
+        // 부모의 필드이기 때문에 this 쓸 수 있음
     }
 
 }

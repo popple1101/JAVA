@@ -23,6 +23,7 @@ public class C04PolymorphismTest {
         child3.setName("사나");
         test(child3);
 
+        test(child1);
         child1 = makeChild(0, "김모모");
         System.out.println(child1);
         child1 = makeChild(1, "kim momo");
