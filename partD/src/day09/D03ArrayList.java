@@ -21,7 +21,7 @@ public class D03ArrayList {
         int size = list.size();
         System.out.println("리스트의 크기 : " + size);
 
-        // 리스트 항목 삭제 : 리스트 크기 변경
+        // 리스트 항목 삭제 : 리스트 크기 변경 // 객체를 추가,수정할 필요 없고 객체 참조할 필요도 없기 때문에  새 객체를 만들어줄 필요가 없음
         String result = list.remove(1);
         System.out.println("remove 리턴 : " + result);
         System.out.println("삭제 후 list : " + list);
@@ -45,18 +45,17 @@ public class D03ArrayList {
         list.add("tesla"); // 같은 문자열 하나 추가
         System.out.println(list);
         System.out.println("xiaomi의 위치 찾기");
-        System.out.println("\tlist.indexOf :" + list.indexOf("xiaomi")); // 1
-        System.out.println("\tlist.lastIndexOf :" + list.lastIndexOf("xiaomi")); // 4
+        System.out.println("\tlist.indexOf : " + list.indexOf("xiaomi")); // 1
+        System.out.println("\tlist.lastIndexOf : " + list.lastIndexOf("xiaomi")); // 4
         // 없는 요소 찾으면 -1 리턴
 
-        System.out.println("특정 데이터의 저장 여부 : contatins" );
+        System.out.println("특정 데이터의 저장 여부 : contatins");
         System.out.println("\txiaomi 있음 ? " + list.contains("xiaomi")); // true
         System.out.println("\tfacebook 있음 ? " + list.contains("facebook")); // false
 
         // 정렬
         list.sort(null);
-        System.out.println("정렬 후 : " + list );
-    
+        System.out.println("정렬 후 : " + list);
     }
 }
 

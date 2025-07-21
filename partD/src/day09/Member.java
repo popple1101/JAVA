@@ -19,5 +19,6 @@ public class Member {
     private String name;
     private double point;
 
-    // 바이트 코드 . class 파일을 가보면 롬복이 만들어준 코드가 있습니다.
+    // 바이트 코드 .class 파일을 가보면 롬복이 만들어준 코드가 있습니다.
 }
+
