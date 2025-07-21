@@ -52,8 +52,10 @@ public class C14MyFunctionalInterface {
  * 함수형 인터페이스를 '익명 클래스'로 구현할 때 주로 람다식을 사용을 합니다.
  * ㄴ 다른 메소드의 인자로 쓰입니다.
  */
+@FunctionalInterface
 interface ITestA {
     void testa(String message); // 인자 O, 리턴 X : Consumer(소비자) / 추상 메소드가 1개
+    // void testXXX(); // 오류 : why? @FunctionalInterface는 함수형 인터페이스에만 표시
 }
 
 interface ITestB {
