@@ -101,8 +101,10 @@ class Product implements Comparable<Product>, Cloneable {
     @Override
     public int compareTo(Product other) {
         // Product 객체의 비교는 '가격'으로 한다.
-        // return (int) (this.price - other.price); // 1안)
-        return Double.compare(this.price, other.price); // 2안) // 실수 안전 비교 함수
+        return (int) (this.price - other.price);
+        // 1안) 42456.34 - 42456.12 과 42456.12 - 42456.34 를 강제로 int 변환하면 0
+        //      => 2개가 같은 값 처리됨. 소수점 이하 자리 비교와 정확한 정렬 못함.
+        // return Double.compare(this.price, other.price); // 2안) // 실수 안전 비교 함수
         // return this.price.compareTo(other.price); // 객체 정렬 기준
         // 3안) 단, private Double price; 로 변경해야함
     }
