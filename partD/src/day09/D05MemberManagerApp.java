@@ -15,7 +15,8 @@ public class D05MemberManagerApp {
             System.out.println("[A] 회원 추가  [R] 회원 삭제  [U] 회원 포인트 변경" +
                     "\n[S] 회원 목록  [N] 이름 조회  [E] 종료");
             String menu = System.console().readLine("선택 >>> ");
-
+            // 인덱스, 회원 id 입력 : 잘못된 문자 입력하면 Integer.parseInt() 메소드 예외 생깁니다.
+            // 단순 처리 : switch 문을 try 구문으로 묶어서 예외 발생하면 다시 반복 처음 메뉴 입력 실행하기
             switch (menu.toUpperCase()) {
                 case "A":
                     addMember(list); // id, 이름 입력. point는 기본값 100
