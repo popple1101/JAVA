@@ -8,7 +8,7 @@ import java.util.TreeMap;
 public class D07MapTest {
   public static void main(String[] args) {
     Map<String, String> map = new HashMap<>();
-    // 1 . 데이터 저장(추가, 변경)
+    // 1 . ✅ 데이터 저장(추가, 변경)
     map.put("t1", "사나");
     map.put("t2", "모모");
     map.put("t3", "나연");
@@ -34,13 +34,13 @@ public class D07MapTest {
     Map<String, String> treeMap = new TreeMap<>(map);
     System.out.println("treeMap : " + treeMap);
 
-    // 6. key 로 value 가져오기
+    // 6. ✅ key 로 value 가져오기
     String temp = treeMap.get("t1");
     System.out.println("t1 의 value :  " + temp);
     temp = treeMap.get("t2");
     System.out.println("t2 의 value :  " + temp);
 
-    //
+    // ✅ keySet
     System.out.println("keyset : " + treeMap.keySet());
     // 7. map 의 반복문
     System.out.println("~~~ keyset 반복 ~~~");

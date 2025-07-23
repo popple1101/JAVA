@@ -107,3 +107,23 @@ public class D05MemberManagerApp {
     }
 
 }
+
+/*
+ * Math.random() : 0이상 1.0 미만
+목표공식
+1 ~ 50 정수	    (int)(Math.random() * 50) + 1
+10 ~ 99 정수	(int)(Math.random() * 90) + 10
+0 ~ 9 정수	    (int)(Math.random() * 10)
+(int)Math.ceil(Math.random() * range); 
+
+1 ~ N	(int)(Math.random() * N) + 1
+A ~ B	(int)(Math.random() * (B - A + 1)) + A
+0 ~ N-1	(int)(Math.random() * N)
+
+반올림해서 소수점 버리기 : int num = (int)Math.round(Math.random() * 50 + 1);
+
+if (m.getName().contains("김")) {
+    int bonus = (int)(Math.random() * 50) + 10;
+    m.setPoint(m.getPoint() + bonus);
+}
+ */

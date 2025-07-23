@@ -61,13 +61,12 @@ public class Test02 {
         int range = 50;
         if (confirm("회원 추가")) {
 
-            if (rndNum < 0.5) {
-                list.add(new Member(inputId, inputName, (int)(rndNum*range+1)));
-                System.out.println("성공");
-            } else {
-                System.out.println("실패");
-
-            }
+            // if (rndNum < 0.5) {
+                list.add(new Member(inputId, inputName, rndNum*50+1));
+                // System.out.println("성공");
+            // } else {
+            //     System.out.println("실패");
+            // }
             
         } else {
             System.out.println("등록 작업을 취소하였습니다.");
@@ -114,3 +113,12 @@ public class Test02 {
         }
     }
 }
+
+/*
+ * 
+목표공식
+1 ~ 50 정수	    (int)(Math.random() * 50) + 1
+10 ~ 99 정수	(int)(Math.random() * 90) + 10
+0 ~ 9 정수	    (int)(Math.random() * 10)
+(int)Math.ceil(Math.random() * range); 
+ */
