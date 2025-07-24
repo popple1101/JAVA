@@ -31,13 +31,19 @@ public class D12ObjectConcept {
 @ToString
 @Getter
 @Setter // final 아닌 것만 setter 만들어집니다.
-@RequiredArgsConstructor    // final 키워드 속성을 초기화 하는 인자를 갖습니다.
+// @RequiredArgsConstructor    // final 키워드 속성을 초기화 하는 인자를 갖습니다.
 @AllArgsConstructor      // 모든 속성을 초기화하는 인자를 갖습니다.
 class People {
     // final : 값을 변경 못함. 생성자에서 초기화 필수!!
     private final int  id;
     private final String name;
     private double etc;
+
+    // @RequiredArgsConstructor 에 해당하는 코드
+    public People(int id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     // @EqualsAndHashCode 의 실제코드
     @Override
