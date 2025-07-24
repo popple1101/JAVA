@@ -43,7 +43,7 @@ public class D18TextFileTest {
         FileWriter fw = null;
         PrintWriter pw = null;
         try {
-            fw = new FileWriter(filename, true); // true : 기존 파일내용에 추가
+            fw = new FileWriter(filename, Charset.forName("UTF-8") ,true); // true : 기존 파일내용에 추가
             pw = new PrintWriter(fw); // Charset 지정은 가능하나 첫번째 인자 타입이 제한적
             String test = "PrintWriter는 FileWriter 또는 파일명을 인자로 사용합니다.";
             String[] lines = test.split("\\s+"); // \\s+ : 공백,탭,줄바꿈

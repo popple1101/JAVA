@@ -1,0 +1,29 @@
+1.  다음 5라인을 java_keyword.csv 로 저장하세요.
+
+public,공용의,1
+private,사적인,1
+list,목록,1
+immutable,불변의,3
+static,정적인,2
+
+
+2. 1번 csv 파일을 읽어와서 List<JavaKeyWord> 로 변환하는 메소드를 만드세요.
+리턴 타입 List<JavaKeyWord>
+
+@Getter
+@Setter
+@AllArgsConstructor
+class JavaKeyWord {
+  private String keyword;
+  private String korean;
+  private int level;
+  @Override
+  public String toString() {
+    return keyword + "," + korean + "," + level;
+  }
+}
+
+3. 1번 csv 파일에 아래와 같은 JavaKeyWord 객체의 값을 저장하세요.
+
+JavaKeyWord  k1 = new JavaKeyWord("final","최종의",1);
+JavaKeyWord  k2 = new JavaKeyWord("construct","건설하다",2);
